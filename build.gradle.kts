@@ -1,3 +1,4 @@
+
 plugins {
     id("fabric-loom") version "1.14-SNAPSHOT"
     id("maven-publish")
@@ -11,8 +12,9 @@ base {
 }
 
 repositories {
-    mavenCentral()
     maven("https://maven.meteordev.org/releases")
+    maven("https://maven.meteordev.org/snapshots")
+    mavenCentral()
 }
 
 dependencies {
@@ -21,7 +23,7 @@ dependencies {
 
     modImplementation("net.fabricmc:fabric-loader:0.18.4")
 
-    modImplementation("meteordevelopment:meteor-client:0.5.8")
+    modCompileOnly("meteordevelopment:meteor-client:1.21.11-SNAPSHOT")
 }
 
 java {
